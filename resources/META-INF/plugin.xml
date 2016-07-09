@@ -1,0 +1,37 @@
+<idea-plugin version="2">
+  <id>com.oliverlockwood.plugins.jenkinsfile</id>
+  <name>Jenkinsfile IDEA plugin</name>
+  <version>1.0</version>
+  <vendor email="oliver.lockwood@cantab.net" url="http://www.oliverlockwood.com">Oliver Lockwood</vendor>
+
+  <description><![CDATA[
+      Description for plugin.<br>
+      <em>most HTML tags may be used</em>
+      Jenkins icon under <a href="https://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.  See <a href="https://jenkins.io/">https://jenkins.io/</a>
+    ]]></description>
+
+  <change-notes><![CDATA[
+      Change notes for plugin.<br>
+      <em>most HTML tags may be used</em>
+    ]]>
+  </change-notes>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="141.0"/>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <!-- uncomment to enable plugin in all products
+  <depends>com.intellij.modules.lang</depends>
+  -->
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+    <fileTypeFactory implementation="com.oliverlockwood.plugins.jenkinsfile.JenkinsFileTypeFactory" />
+  </extensions>
+
+  <actions>
+    <!-- Add your actions here -->
+  </actions>
+
+</idea-plugin>
