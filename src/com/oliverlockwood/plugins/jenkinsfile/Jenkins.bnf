@@ -1,0 +1,20 @@
+{
+  parserClass="com.oliverlockwood.plugins.jenkinsfile.parser.JenkinsParser"
+
+  extends="com.intellij.extapi.psi.ASTWrapperPsiElement"
+
+  psiClassPrefix="Jenkins"
+  psiImplClassSuffix="Impl"
+  psiPackage="com.oliverlockwood.plugins.jenkinsfile.psi"
+  psiImplPackage="com.oliverlockwood.plugins.jenkinsfile.psi.impl"
+
+  elementTypeHolderClass="com.oliverlockwood.plugins.jenkinsfile.psi.JenkinsTypes"
+  elementTypeClass="com.oliverlockwood.plugins.jenkinsfile.psi.JenkinsElementType"
+  tokenTypeClass="com.oliverlockwood.plugins.jenkinsfile.psi.JenkinsTokenType"
+}
+
+jenkinsFile ::= item_*
+
+private item_ ::= (step|CRLF|COMMENT)
+
+step ::= (STEP_KEY PARAMETER) | STEP_KEY

@@ -28,6 +28,7 @@
   <extensions defaultExtensionNs="com.intellij">
     <!-- Add your extensions here -->
     <fileTypeFactory implementation="com.oliverlockwood.plugins.jenkinsfile.JenkinsFileTypeFactory" />
+    <lang.parserDefinition language="Jenkins" implementationClass="com.oliverlockwood.plugins.jenkinsfile.JenkinsParserDefinition"/>
   </extensions>
 
   <actions>
